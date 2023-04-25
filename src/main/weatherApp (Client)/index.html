@@ -1,0 +1,143 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>Weather App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="icon" type="image/jpg" href="images/weather-app.png">
+    <!--    https://cdn0.iconfinder.com/data/icons/weather-forecast-fill-outline/64/15_global-weather-forcast-earth-nature-512.png-->
+    <link rel="manifest" href="/manifest.json">
+
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!--  <script type="text/javascript">-->
+    <!--    window.onload = getUserLocation;-->
+    <!--  </script>-->
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <meta name="theme-color" content="#fafafa">
+
+  <header className="App-header">
+    <img class ="logo" src="images/sun.png" alt= ”logo”>
+    <h1>Global Weather</h1>
+
+  </header>
+
+</head>
+<body onload="getUserLocation(); retrieveStoredCities();">
+
+
+
+<!-- Add your site or application content here -->
+<div id="sidebar" class="sidebar">
+    <h2>My Locations</h2>
+</div>
+  <div class = "searchbox">
+    <div class="search">
+      <input type ="text" class="searchbar" city-Search placeholder="Enter Location...">
+      <br><br>
+      <form id="unitSelect">
+        <input type="radio" id="Celsius" name="unit" value="Celsius" checked="checked">
+        <label class="form-control" for="Celsius">Celsius</label>
+        <input type="radio" id="Fahrenheit" name="unit" value="Fahrenheit">
+        <label class="form-control" for="Fahrenheit">Fahrenheit</label><br>
+      </form>
+      <br><br>
+      <button onclick="searchCity()" class="searchButton"><span>Search</span></button>
+      <button onclick="saveLocation()" class="saveButton"><span>Save Location</span></button>
+    </div>
+    <br><br>
+    <div class="weatherdataCurrent">
+      <h2 class = "city"></h2>
+      <h3 class ="temp"></h3>
+      <img src="" alt="" class="icon"/>
+      <h4 class="description"></h4>
+      <h4 class="humidity"></h4>
+      <h4 class="wind"></h4>
+    </div>
+    <br>
+    <h2 class="weatherdataFuture">Weather for the next 5 Days</h2>
+    <div class="weatherdataF1">
+<!--      <h2 class = "city"></h2>-->
+        <div class ="time1"></div>
+        <h4 class ="temp1"></h4>
+      <img src="" alt="" class="icon1"/>
+<!--      <div class="description"></div>-->
+<!--      <div class="humidity"></div>-->
+<!--      <div class="wind"></div>-->
+    </div>
+    <p> </p>
+    <div class="weatherdataF2">
+<!--      <h2 class = "city"></h2>-->
+        <div class ="time2"></div>
+        <h4 class ="temp2"></h4>
+      <img src="" alt="" class="icon2"/>
+<!--      <div class="description"></div>-->
+<!--      <div class="humidity"></div>-->
+<!--      <div class="wind"></div>-->
+    </div>
+    <p> </p>
+    <div class="weatherdataF3">
+<!--      <h2 class = "city"></h2>-->
+        <div class ="time3"></div>
+        <h4 class ="temp3"></h4>
+      <img src="" alt="" class="icon3"/>
+<!--      <div class="description"></div>-->
+<!--      <div class="humidity"></div>-->
+<!--      <div class="wind"></div>-->
+    </div>
+    <p> </p>
+    <div class="weatherdataF4">
+<!--      <h2 class = "city"></h2>-->
+        <div class ="time4"></div>
+        <h4 class ="temp4"></h4>
+      <img src="" alt="" class="icon4"/>
+<!--      <div class="description"></div>-->
+<!--      <div class="humidity"></div>-->
+<!--      <div class="wind"></div>-->
+    </div>
+    <p> </p>
+    <div class="weatherdataF5">
+<!--      <h2 class = "city"></h2>-->
+        <div class ="time5"></div>
+        <h4 class ="temp5"></h4>
+      <img src="" alt="" class="icon5"/>
+<!--      <div class="description"></div>-->
+<!--      <div class="humidity"></div>-->
+<!--      <div class="wind"></div>-->
+    </div>
+
+  </div>
+
+<script src="js/vendor/modernizr-3.11.2.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
+  window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+  ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+<div class="row">
+    <footer>
+        <a href="about.html"><i class="fa-solid fa-info-circle"></i></a>
+    </footer>
+</div>
+
+</html>
+
+
